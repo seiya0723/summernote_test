@@ -1,8 +1,9 @@
 from django.shortcuts import render,redirect
 
 from django.views import View
-from .models import Topic
 
+
+from .models import Topic
 from .forms import TopicForm
 
 class IndexView(View):
@@ -17,12 +18,10 @@ class IndexView(View):
 
     def post(self, request, *args, **kwargs):
         
-        
         form    = TopicForm(request.POST)
 
         if form.is_valid():
             form.save()
-
 
         return redirect("bbs:index")
 
