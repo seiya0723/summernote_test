@@ -161,7 +161,7 @@ ALLOWED_TAGS = [
     'abbr', 'acronym', 'b', 'blockquote', 'code', 'strike', 'u', 'sup', 'sub','font'
 ]
 ATTRIBUTES = {
-    '*': ['style', 'align', 'title', ],
+    '*': ['style', 'align', 'title','color' ],
     'a': ['href', ],
     'img': ['src', ],
 }

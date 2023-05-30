@@ -18,9 +18,14 @@ class IndexView(View):
 
     def post(self, request, *args, **kwargs):
         
+        print(request.POST["comment"])
         form    = TopicForm(request.POST)
 
         if form.is_valid():
+            cleaned = form.clean()
+            print(cleaned["comment"])
+
+
             form.save()
 
         return redirect("bbs:index")
